@@ -36,27 +36,7 @@ def largestRectangle(h):
             s = h[top]*(index-stack[-1]-1)
         rs = max(rs, s)
     return rs
-    """stack = []
-    rs = 0
-    index = 0
-    while index < len(h):
-        if len(stack)==0 or h[stack[-1]] <= h[index]:
-            stack.append(index)
-            index +=1
-        else:
-            top = stack.pop()
-            if len(stack):
-            rs = max(rs, h[top]*(index-stack[-1]-1 if stack else index))
     
-    while len(stack):
-        top = stack.pop()
-        rs = max(rs, h[top]*(index-stack[-1]-1 if stack else index))
-        
-    return rs"""
-    
-    
-        
-
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
